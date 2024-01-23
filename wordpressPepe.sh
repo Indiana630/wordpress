@@ -60,9 +60,10 @@ sudo mv /tmp/wordpress /var/www/html/
 # Configurar WordPress
 cd /var/www/html/wordpress
 sudo cp wp-config-sample.php wp-config.php
-sudo sed -i "s/wordpress/wordpress/g" wp-config.php
-sudo sed -i "s/wordpress/wordpressuser/g" wp-config.php
-sudo sed -i "s/wordpress/password/g" wp-config.php
+sudo sed -i "s/database_name_here/wordpress/g" wp-config.php
+sudo sed -i "s/username_here/wordpress/g" wp-config.php
+sudo sed -i "s/password_here/wordpress/g" wp-config.php
+
 
 # Reiniciar Nginx
 sudo systemctl restart nginx
